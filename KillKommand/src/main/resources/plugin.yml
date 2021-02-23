@@ -1,0 +1,11 @@
+name: KillKommand
+version: ${project.version}
+main: me.gamzer.killkommand.KillKommand
+api-version: 1.14
+authors: [ Gamzer ]
+description: Players can do /kill to return to spawn.
+commands:
+  kill:
+    description: Kills the player to return them to spawn.
+    usage: /<command>
+    aliases: []
