@@ -6,6 +6,8 @@
 
 package me.gamzer.killkommand.commands;
 
+import jdk.nashorn.internal.runtime.regexp.joni.encoding.CharacterType;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -16,7 +18,9 @@ public class killCommand implements CommandExecutor {
         if (label.equalsIgnoreCase("kill")) {
             if (sender instanceof Player) {
                 ((Player) sender).setHealth(0);
-                sender.sendMessage("[*] ez'd");
+                sender.sendMessage(ChatColor.GREEN + "[*]" + ChatColor.RESET + " You killed yourself successfully!");
+            } else {
+                sender.sendMessage(ChatColor.RED + "[!]" + ChatColor.RESET +  " You cannot run this command as a non-player!");
             }
         }
         return true;
